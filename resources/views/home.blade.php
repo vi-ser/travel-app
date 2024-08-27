@@ -22,7 +22,7 @@
                 <p class="text-white mb-4">
                     Documenta ogni tappa, dai momenti indimenticabili alle piccole curiosità, creando un racconto unico delle tue avventure. Conservalo per sempre, condividilo con chi vuoi, e rivivi ogni emozione ogni volta che lo desideri. 
                 </p>
-                <a href="{{ route('trips.index')}}" class="my-btn-primary text-decoration-none" >
+                <a href="{{ route('trips.index')}}" class="my-btn-secondary text-decoration-none" >
                    Comincia il tuo viaggio
                 </a>
             </div> 

@@ -23,7 +23,7 @@ class TripController extends Controller
      */
     public function create()
     {
-        //
+        return view('trip.create');
     }
 
     /**
@@ -31,7 +31,16 @@ class TripController extends Controller
      */
     public function store(StoreTripRequest $request)
     {
-        //
+        $newTrip = new Trip();
+        $newTrip->title = $request->title;
+        $newTrip->description = $request->description;
+        $newTrip->start_date = $request->start;
+        $newTrip->end_date = $request->end;
+
+        $newTrip->save();
+
+        return redirect()->route('trips.index');
+
     }
 
     /**
