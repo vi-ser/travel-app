@@ -12,14 +12,14 @@
     @else
         <div class="row">
             @foreach($trips as $trip)
-                <div class="col-lg-6">
-                    <div class="card rounded-4 my-card mb-4">
+                <div class="col-12 col-md-6 col-lg-3 ">
+                    <a href="{{ route('trips.show', $trip->id) }}"  class="card my-card rounded-4 border-0 my-card mb-4 text-decoration-none">
+                        <img class="cover-img" src="{{ asset('storage/' . $trip->cover_image) }}" alt="{{ $trip->title }}">
+
                         <div class="card-body">
-                            <h5 class="card-title">{{ $trip->title }}</h5>
-                            <p class="card-text">{{ $trip->description }}</p>
-                            <a href="{{ route('trips.show', $trip->id) }}" class="my-btn-primary text-decoration-none">Visualizza Viaggio</a>
+                            <h6 class="card-title mb-0">{{ $trip->title }}</h6>
                         </div>
-                    </div>
+                    </a>
                 </div>
             @endforeach
         </div>

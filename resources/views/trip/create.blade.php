@@ -4,7 +4,7 @@
 <div class="container py-5">
     <h1 class="fs-2 mb-5">Aggiungi viaggio</h1>
 
-    <form action="{{route('trips.store')}}" method="POST">
+    <form action="{{route('trips.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-3">
@@ -15,6 +15,10 @@
             <label for="description">Descrizione</label>
             <textarea class="form-control" id="description" name="description"
             rows="4"  style="height: auto"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="cover_image">Immagine di copertina</label>
+            <input type="file" class="form-control" name="cover_image" id="cover_image" required>
         </div>
         <div class="mb-3">
             <label for="start" class="form-label">Data di inizio</label>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTripRequest;
 use App\Http\Requests\UpdateTripRequest;
 use App\Models\Trip;
+use Illuminate\Support\Facades\Storage;
 
 class TripController extends Controller
 {
@@ -34,6 +35,14 @@ class TripController extends Controller
         $newTrip = new Trip();
         $newTrip->title = $request->title;
         $newTrip->description = $request->description;
+
+        if ($request->hasFile('cover_image')) {
+
+            $path = Storage::disk('public')->put('trip_images', $request->cover_image);
+
+            $newTrip->cover_image = $path;
+        }
+
         $newTrip->start_date = $request->start;
         $newTrip->end_date = $request->end;
 
