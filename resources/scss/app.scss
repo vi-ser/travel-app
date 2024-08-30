@@ -127,3 +127,28 @@ span::selection {
         transition: 0.3s;
     }
 }
+
+.my-btn-delete {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    color: rgb(165, 0, 0);
+    padding: 0;
+    width: 44px;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    user-select: none;
+    font-size: 1.5em;
+    border: none;
+
+    &:hover {
+        background-color: rgb(252, 213, 213);
+        transition: ease 0.3s;
+    }
+
+    &:not(:hover) {
+        transition: ease 0.3s;
+        background-color: transparent;
+    }
+}

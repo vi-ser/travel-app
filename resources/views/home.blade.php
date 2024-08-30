@@ -10,7 +10,7 @@
                 <h1 class="display-1 fw-bold text-white">
                     Esplora,
                 </h1>
-                <h1 class="display-1 fw-bold">
+                <h1 class="display-1 fw-bold text-white">
                     Ricorda,
                 </h1>
                 <h1 class="display-1 fw-bold text-white mb-4">

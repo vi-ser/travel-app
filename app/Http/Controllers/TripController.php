@@ -57,7 +57,7 @@ class TripController extends Controller
      */
     public function show(Trip $trip)
     {
-        //
+        return view('trip.show', compact('trip'));
     }
 
     /**
@@ -81,6 +81,7 @@ class TripController extends Controller
      */
     public function destroy(Trip $trip)
     {
-        //
+        $trip->delete();
+        return redirect()->route('trips.index');
     }
 }
